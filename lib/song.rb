@@ -44,22 +44,7 @@ class Song
     def self.alphabetical
       self.all.sort_by{|s| s.name}
     end
-  #   def self.new_from_filename(filename)
-  #         array=[]
-  #         new_ar=[]
-  #         array=filename.split("- ")
-  #         artist_name=array[0]
-  #         # @artist_name=artist_name
-  #         new_ar=array[1].partition(".mp3")
-  #         name=new_ar[0]
-  #         song = self.new
-  #         song.artist_name = artist_name
-  #          @@all << song
-  #           song = self.new
-  #         song.name = name
-  #         @@all << song
-  #        return @@all
-  #  end
+  
    def self.new_from_filename(file_name)
     new_song = self.new
     new_song.name = file_name.split(" - ")[1].split(".")[0]
